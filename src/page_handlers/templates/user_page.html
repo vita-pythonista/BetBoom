@@ -1,0 +1,26 @@
+<style>
+    .username {
+        text-decoration: underline;
+    }
+    .user_contacts td {
+        padding: 15px;
+        border: 1px solid #000;
+    }
+</style>
+
+<h1>You on <span style="text-decoration: underline;" class="username">{{ user.login }}</span>'s session page</h1>
+<h2>You can see <span class="username">{{user.login}}</span>'s contacts book.</h2>
+<table class="user_contacts">
+    <tr>
+        <td>ID</td>
+        <td>TYPE</td>
+        <td>CONTENT</td>
+    </tr>
+    {% for contact in user.contacts %}
+    <tr>
+        <td>{{ contact.contact_id }}</td>
+        <td>{{ contact.contact_type }}</td>
+        <td>{{ contact.content }}</td>
+    </tr>
+    {% endfor %}
+</table>

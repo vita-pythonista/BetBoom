@@ -1,0 +1,5 @@
+from .user_add_contact_handler import user_add_contact_handler
+from .user_get_handler import user_get_handler
+from .user_login_handler import user_login_handler
+from .user_registration_handler import user_registration_handler
+from .user_remove_contact_handler import user_remove_contact_handler
